@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmployeePhone.MainPage">
+
+    <ScrollView Margin="10, 20">
+        <StackLayout Padding="3">
+            <Grid BackgroundColor="Gray" Padding="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="1.5*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Name:" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="EmployeeNameEntry" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Department:" Grid.Row="1" Grid.Column="0"/>
+                <Picker x:Name="DepartmentPicker" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Date of Joining:" Grid.Row="2" Grid.Column="0"/>
+                <DatePicker x:Name="DateOfJoinDatePicker" Grid.Row="2" Grid.Column="1"/>
+
+                <Button Text="Add Employee" Clicked="OnAddEmployee" Grid.Row="3" Grid.Column="0"/>
+            </Grid>
+
+            <Grid BackgroundColor="Gray" Padding="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="1.5*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Select Employee" Grid.Row="0" Grid.Column="0"/>
+                <Picker x:Name="EmployeesPicker" Grid.Row="0" Grid.Column="1" SelectedIndexChanged="OnSelectedEmployeeChanged"/>
+
+                <Label Text="Employee Id" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="EmployeeIdEntry2" Grid.Row="1" Grid.Column="1"/>
+                
+                <Label Text="Employee Name" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="EmployeeNameEntry2" Grid.Row="2" Grid.Column="1"/>
+                
+                <Label Text="Department" Grid.Row="3" Grid.Column="0"/>
+                <Picker x:Name="DepartmentPicker2" Grid.Row="3" Grid.Column="1"/>
+
+                <Label Text="Date Of Joining" Grid.Row="4" Grid.Column="0"/>
+                <DatePicker x:Name="DateOfJoiningPicker2" Grid.Row="4" Grid.Column="1"/>
+
+                <Button Text="Update Employee" Grid.Row="5" Grid.Column="0" Clicked="OnUpdateClicked"/>
+                <Button Text="Delete Employee" Grid.Row="5" Grid.Column="1" Clicked="OnDeleteClicked"/>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+    
+
+</ContentPage>
