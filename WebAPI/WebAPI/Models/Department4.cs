@@ -11,6 +11,5 @@ namespace WebAPI.Models
         public string DepartmentName { get; set; }
 	public string DepartmentName2 { get; set; }
 	public string DepartmentName3 { get; set; }
-	public string DepartmentName4 { get; set; }
     }
 }
